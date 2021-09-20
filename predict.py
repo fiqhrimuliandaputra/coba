@@ -8,7 +8,7 @@ def preprocess_input(input_data):
     #     "null": np.nan,
     #     None: np.nan
     # }
-    input_data.pop("Risk", None)
+    input_data.pop("loan_status", None)
     input_data.pop("score_proba", None)
     input_data = pd.DataFrame.from_dict(input_data, orient='index')#.replace(mapper_replace)
     return input_data
